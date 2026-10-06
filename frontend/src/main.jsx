@@ -13,8 +13,8 @@ import QuantumCore3D from "./QuantumCore3D";
 import TransactionGraph3D from "./TransactionGraph3D";
 import "./style.css";
 
-const FASTAPI_BASE = "http://127.0.0.1:8000";
-const EXPRESS_BASE = "http://127.0.0.1:5000";
+const FASTAPI_BASE = import.meta.env.VITE_FASTAPI_BASE || "http://127.0.0.1:8000";
+const EXPRESS_BASE = import.meta.env.VITE_EXPRESS_BASE || "http://127.0.0.1:5000";
 
 function App() {
   const [activeTab, setActiveTab] = useState("dashboard");
